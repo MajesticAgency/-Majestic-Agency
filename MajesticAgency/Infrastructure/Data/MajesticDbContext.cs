@@ -11,6 +11,8 @@ namespace Infrastructure.Data
 
         public DbSet<Service> Services { get; set; }
         public DbSet<SubService> SubServices { get; set; }
+        public DbSet<Order> Orders { get; set; }
+
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

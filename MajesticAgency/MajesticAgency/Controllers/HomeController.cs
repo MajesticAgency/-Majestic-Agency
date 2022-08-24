@@ -1,4 +1,5 @@
-﻿using Core.Entities.ViewModel;
+﻿using Core.Entities;
+using Core.Entities.ViewModel;
 using Core.Interface;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -14,15 +15,18 @@ namespace MajesticAgency.Controllers
     {
         private readonly IService _service;
         private readonly ISubService _subService;
+        private readonly IOrder _order;
+
 
 
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger, IService service, ISubService subService)
+        public HomeController(ILogger<HomeController> logger, IService service, ISubService subService, IOrder order)
         {
             _logger = logger;
             _service = service;
             _subService = subService;
+            _order = order;
         }
 
         public async Task<IActionResult> Index()
@@ -38,5 +42,16 @@ namespace MajesticAgency.Controllers
             return View(service);
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Index(Order order)
+        {
+            if (ModelState.IsValid)
+            {
+                await _order.CreateOrder(order);
+                return RedirectToAction(nameof(Index));
+            }
+            return View(order);
+        }
     }
 }
