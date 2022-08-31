@@ -244,3 +244,29 @@ a.btn-get-started.scrollto:hover {
     border-color: #e1251b;
     color: white;
 }
+
+/*--------------------------------------------------------------
+# Privacy Section
+--------------------------------------------------------------*/
+.privacy{
+    background:url(/assets/img/BackgroundPrivacyPolicy.png) no-repeat;
+    background-size:cover;
+}
+.privacy .contant h3 {
+    font-weight: 600;
+    font-size: 28px;
+    color:#fff;
+}
+.privacy .contant p {
+    font-size: 16px;
+    color: #fff;
+    text-align: justify;
+}
+.privacy .contant p a {
+    font-size: 16px;
+    color: #e1251b;
+}
+.privacy .contant li{
+    font-size: 16px;
+    color: #fff;
+}

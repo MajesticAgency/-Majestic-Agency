@@ -105,5 +105,11 @@ namespace MajesticAgency.Controllers
 
             return RedirectToAction("Index", "Home");
         }
+        public async Task<IActionResult> Privacy()
+        {
+            ViewModels viewModels = new ViewModels();
+            viewModels.Services = await _service.GetServices();
+            return View(viewModels);
+        }
     }
 }
