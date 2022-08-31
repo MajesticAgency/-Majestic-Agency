@@ -38,6 +38,8 @@ namespace MajesticAgency
             services.AddTransient<IService, ServiceRepository>();
             services.AddTransient<ISubService, SubServiceRepository>();
             services.AddTransient<IOrder, OrderRepository>();
+            services.AddScoped<IEmail, EmailRepository>();
+
 
 
         }

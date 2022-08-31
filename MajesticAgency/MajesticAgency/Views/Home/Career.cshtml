@@ -1,0 +1,328 @@
+﻿@model Core.Entities.ViewModel.ViewModels
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Majestic Agency</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+    <link href="/assets/img/MajesticAgencyIcon.png" rel="icon">
+  <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="/assets/css/style.css" rel="stylesheet">
+  <link href="/assets/css/styleSheet.css" rel="stylesheet">
+  <link href="/assets/css/main.css" rel="stylesheet">
+
+
+
+  <!-- =======================================================
+  * Template Name: Day - v4.8.0
+  * Template URL: https://bootstrapmade.com/day-multipurpose-html-template-for-free/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo"><img src="/assets/img/MajesticAgencyLogo.png" alt="" class="img-fluid"></a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto " href="/home/index">Home</a></li>
+          <li><a class="nav-link scrollto" href="/Home/#about">About</a></li>
+          <li class="dropdown "><a href="/Home/#services"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a asp-controller="Home" asp-action="ServiceDetails" asp-route-Id="1">Brand & Design Services</a></li>
+              <li><a asp-controller="Home" asp-action="ServiceDetails" asp-route-Id="2">Digital Marketing Services</a></li>
+              <li><a asp-controller="Home" asp-action="ServiceDetails" asp-route-Id="3">Development Services</a></li>
+              <li><a asp-controller="Home" asp-action="ServiceDetails" asp-route-Id="4">Production Services</a></li>
+              <li><a asp-controller="Home" asp-action="ServiceDetails" asp-route-Id="5">Content Services</a></li>
+              <li><a asp-controller="Home" asp-action="ServiceDetails" asp-route-Id="6">Translation Services</a></li>
+
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto active" asp-controller="Home" asp-action="Career">Career</a></li>
+                    <li><a class="nav-link scrollto" href="/home/#contact">Contact</a></li>
+                    <li><a class="nav-link scrollto" href="/home/#getstarted">Get Started</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+        <section class="getstarted ">
+            <div class="container">
+                <div class="row" data-aos="fade-up">
+                    <div style="text-align:center">
+                        <h3 style="color: #e1251b;">READY TO  <strong>GET STARTED?</strong></h3>
+                        <p style="margin-bottom: 5%;">Fill out the form and we'll get back to you as soon as possible.</p>
+                    </div>
+
+                    <div class="col-lg-12">
+                        <form class="php-email-form"  asp-action="Career" method="post" enctype="multipart/form-data">
+                            <div class="row">
+                                <div class="col-md-4 form-group">
+                                    <label style="font-size: 15px;color: #404040;font-weight: 700;margin: 10px 0;">Full Name</label>
+                                    <input type="text" class="form-control" asp-for="Career.FullName">
+                                </div>
+                                <div class="col-md-4 form-group">
+                                    <label style="font-size: 15px;color: #404040;font-weight: 700;margin: 10px 0;">Age</label>
+                                    <input type="text" class="form-control" asp-for="Career.Age">
+                                </div>
+
+                                <div class="col-md-4 form-group">
+                                    <label style="font-size: 15px;color: #404040;font-weight: 700;margin: 10px 0;">Marital Status</label>
+                                    <input type="text" class="form-control" asp-for="Career.MaritalStatus">
+                                </div>
+
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-4 form-group">
+                                    <label style="font-size: 15px;color: #404040;font-weight: 700;margin: 10px 0;">Email Address</label>
+                                    <input type="text" class="form-control" asp-for="Career.EmailAddress">
+                                </div>
+                                <div class="col-md-4 form-group">
+                                    <label style="font-size: 15px;color: #404040;font-weight: 700;margin: 10px 0;">Phone Number</label>
+                                    <input type="text" class="form-control" asp-for="Career.PhoneNumber">
+                                </div>
+                                <div class="col-md-4 form-group">
+                                    <label style="font-size: 15px;color: #404040;font-weight: 700;margin: 10px 0;">Current Residence</label>
+                                    <input type="text" class="form-control" asp-for="Career.CurrentResidence">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-4 form-group">
+                                    <label style="font-size: 15px;color: #404040;font-weight: 700;margin: 10px 0;">Working Field</label>
+                                    <input type="text" class="form-control" asp-for="Career.WorkingField">
+                                </div>
+                                <div class="col-md-4 form-group">
+                                    <label style="font-size: 15px;color: #404040;font-weight: 700;margin: 10px 0;">Number of years of experience working in your field</label>
+                                    <input type="number" class="form-control" asp-for="Career.NumOfExperience">
+                                </div>
+                                <div class="col-md-4 form-group">
+                                    <label style="font-size: 15px;color: #404040;font-weight: 700;margin: 10px 0;">Current Work</label>
+                                    <input type="text" class="form-control" asp-for="Career.CurrentWork">
+                                </div>
+                            </div>
+
+                                                        <div class="row">
+                            <div class="form-group mt-3 col-md-12">
+                            <label style="font-size: 15px;color: #404040;font-weight: 700;margin: 10px 0;">Do you have a desire to learn?</label>
+                            <div style="text-align: center;display: flex;justify-content: space-evenly;">
+                            <label style="font-size: 15px;color: #404040;margin: 10px 0;">Not at all <br /></label>
+                            <input style="width: 20px;" type="radio" name="content" value="1" >
+                            <input style="width: 20px;" type="radio" name="content" value="2" >
+                            <input style="width: 20px;" type="radio" name="content" value="3" >
+                            <input style="width: 20px;" type="radio" name="content" value="4" >
+                            <input style="width: 20px;" type="radio" name="content" value="5" >
+                            <label style="font-size: 15px;color: #404040;margin: 10px 0;">Yes and strongly</label>
+                            </div>
+                            </div>
+                            </div>
+
+                            <div class="row">
+                            <div class="form-group mt-3 col-md-12">
+                            <label style="font-size: 15px;color: #404040;font-weight: 700;margin: 10px 0;">Do you have the ability to generate creative ideas to deliver them to your target customers?</label>
+                            <div style="text-align: center;display: flex;justify-content: space-evenly;">
+                            <label style="font-size: 15px;color: #404040;margin: 10px 0;">Not at all <br /></label>
+                            <input style="width: 20px;" type="radio" name="content2" value="1" >
+                            <input style="width: 20px;" type="radio" name="content2" value="2" >
+                            <input style="width: 20px;" type="radio" name="content2" value="3" >
+                            <input style="width: 20px;" type="radio" name="content2" value="4" >
+                            <input style="width: 20px;" type="radio" name="content2" value="5" >
+                            <label style="font-size: 15px;color: #404040;margin: 10px 0;">Yes and strongly</label>
+                            </div>
+                            </div>
+                            </div>
+
+                            <div class="row">
+                            <div class="form-group mt-3 col-md-12">
+                            <label style="font-size: 15px;color: #404040;font-weight: 700;margin: 10px 0;">According to previous experiences, what is your ability to deliver the required job on time</label>
+                            <div style="text-align: center;display: flex;justify-content: space-evenly;">
+                            <label style="font-size: 15px;color: #404040;margin: 10px 0;">Trouble getting <br />delivered on time<br /></label>
+                            <input style="width: 20px;" type="radio" name="content3" value="1">
+                            <input style="width: 20px;" type="radio" name="content3" value="2">
+                            <input style="width: 20px;" type="radio" name="content3" value="3">
+                            <input style="width: 20px;" type="radio" name="content3" value="4">
+                            <input style="width: 20px;" type="radio" name="content3" value="5">
+                            <label style="font-size: 15px;color: #404040;margin: 10px 0;">Deliver before time</label>
+                            </div>
+                            </div>
+                            </div>
+
+                            <div class="row">
+                            <div class="form-group mt-3 col-md-12">
+                            <label style="font-size: 15px;color: #404040;font-weight: 700;margin: 10px 0; text-align:justify"> In the company, we use a set of programs that help us increase employee productivity, such as project management and time monitoring programs. Writing plans for future steps and writing reports on the tasks performed is an important part of the responsibilities. Are you ready to abide by them?</label>
+                            <div>
+                            <div>
+                            <input style="width: 20px;" type="radio" name="content4" value="1" >
+                            <label>Yes</label>
+                            </div>
+                            <div>
+                            <input style="width: 20px;" type="radio" name="content4" value="2" >
+                            <label>No</label>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="form-group mt-3 col-md-6">
+                                    <label style="font-size: 15px;color: #404040;font-weight: 700;margin: 10px 0;">Expected salary to work</label>
+                                    <input type="number" class="form-control" asp-for="Career.ExpectedSalary">
+                                </div>
+
+                                <div class="form-group mt-3 col-md-6">
+                                    <label style="font-size: 15px;color: #404040;font-weight: 700;margin: 10px 0;">What are the features that make you better than others to get this job?</label>
+                                    <input type="text" class="form-control" asp-for="Career.Features">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group mt-3 col-md-12">
+                                    <label style="font-size: 15px;color: #404040;font-weight: 700;margin: 10px 0;"> Please provide us with your behance link or your business link</label>
+                                    <input type="text" class="form-control" placeholder=" https://www.behance.net/username" asp-for="Career.BehanceLink">
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label style="font-size: 15px;color: #404040;font-weight: 700;margin: 10px 0;"> Please upload your CV:</label>
+                                <input class="form-control form-control-sm" id="formFileSm" type="file" asp-for="Career.CV">
+                            </div>
+
+                            <div class="row" style="margin-top: 1.3%;">
+                                <label style="font-size: 15px;color: #404040;font-weight: 700;margin: 10px 0;">Other notes you'd like to tell us</label>
+                                <div class="input-group mb-3 ">
+                                    <textarea type="text" class="form-control" rows="1" asp-for="Career.Note"></textarea>
+                                </div>
+
+                            </div>
+
+                            <div class="my-3">
+                            </div>
+                            <div class="text-center"><button type="submit">SUBMIT</button></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+                        <div class="footer-info" data-aos="fade-up">
+              <img style="width: 75%;" src="/assets/img/MajesticAgencyLogo2.png"/>
+              <p>
+                <br>
+                <h3 style="font-size:25px;">Get in touch with us?</h3>
+                Email: info&#64;<strong>majesticagency</strong>.net<br>
+                Follow us: &#64;<strong>agencymajestic</strong><br>
+              </p>
+                            <div class="social-links mt-3" >
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-behance"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-youtube"></i></a>
+              </div>
+            </div>
+          </div>
+
+                    <div class="col-lg-2 col-md-6 footer-links" data-aos="fade-up">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="/home/#hero">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/home/#about">About</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/home/#services">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+                    <div class="col-lg-2 col-md-6 footer-links" data-aos="fade-up">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a asp-controller="Home" asp-action="ServiceDetails" asp-route-Id="1">Brand & Design Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a asp-controller="Home" asp-action="ServiceDetails" asp-route-Id="2">Digital Marketing Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a asp-controller="Home" asp-action="ServiceDetails" asp-route-Id="3">Development Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a asp-controller="Home" asp-action="ServiceDetails" asp-route-Id="4">Production Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a asp-controller="Home" asp-action="ServiceDetails" asp-route-Id="5">Content Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a asp-controller="Home" asp-action="ServiceDetails" asp-route-Id="6">Translation Services</a></li>
+            </ul>
+          </div>
+
+
+           <div class="col-lg-4 col-md-6 footer-newsletter" data-aos="fade-up">
+            <h4>TAKE THE LEAP OF FAITH AND LEAVE THE REST TO US</h4>
+            <p>Book a meeting with our strategy team and let’s get down to business.</p>
+            <a class="btn-get-started scrollto" style="margin-top: 5px;margin-bottom: 20px;" href="/home/#getstarted">GET STARTED</a>
+            <img src="/assets/img/ImageFooter.png" class="img-fluid" alt="" style="width:100%;">
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+        <div class="container" >
+            <div class="copyright" >
+                <p data-aos="fade-up">Copyright &copy; 2022 by Majestic Agency, All rights reserved.</p>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="/assets/vendor/aos/aos.js"></script>
+  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+@*  <script src="/assets/vendor/php-email-form/validate.js"></script>
+*@
+  <!-- Template Main JS File -->
+  <script src="/assets/js/main.js"></script>
+
+</body>
+
+</html>
+

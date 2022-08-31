@@ -1,1 +1,1 @@
-# Majestic-Agency
+# Majestic Agency

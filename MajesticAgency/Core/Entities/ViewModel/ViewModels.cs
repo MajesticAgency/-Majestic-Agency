@@ -11,6 +11,8 @@ namespace Core.Entities.ViewModel
         public List<Service> Services { get; set; }
         public List<SubService> SubServices { get; set; }
         public Order Order { get; set; }
+        public Career Career { get; set; }
+
 
     }
 }
