@@ -73,3 +73,11 @@ C:\Users\olash\Desktop\Majestic-Agency-NewVersion\MajesticAgency\MajesticAgency\
 C:\Users\olash\Desktop\Majestic-Agency-NewVersion\MajesticAgency\MajesticAgency\obj\Release\net5.0\MajesticAgency.genruntimeconfig.cache
 C:\Users\olash\Desktop\Majestic-Agency-NewVersion\MajesticAgency\MajesticAgency\obj\Release\net5.0\ref\MajesticAgency.dll
 C:\Users\olash\Desktop\Majestic-Agency-NewVersion\MajesticAgency\MajesticAgency\obj\Release\net5.0\Razor\Views\Home\Career.cshtml.g.cs
+C:\Users\olash\Desktop\Majestic-Agency-NewVersion\MajesticAgency\MajesticAgency\bin\Release\net5.0\Magnum.dll
+C:\Users\olash\Desktop\Majestic-Agency-NewVersion\MajesticAgency\MajesticAgency\bin\Release\net5.0\MailKit.dll
+C:\Users\olash\Desktop\Majestic-Agency-NewVersion\MajesticAgency\MajesticAgency\bin\Release\net5.0\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\olash\Desktop\Majestic-Agency-NewVersion\MajesticAgency\MajesticAgency\bin\Release\net5.0\Microsoft.Extensions.Primitives.dll
+C:\Users\olash\Desktop\Majestic-Agency-NewVersion\MajesticAgency\MajesticAgency\bin\Release\net5.0\MimeKit.dll
+C:\Users\olash\Desktop\Majestic-Agency-NewVersion\MajesticAgency\MajesticAgency\bin\Release\net5.0\BouncyCastle.Crypto.dll
+C:\Users\olash\Desktop\Majestic-Agency-NewVersion\MajesticAgency\MajesticAgency\bin\Release\net5.0\System.IO.Pipelines.dll
+C:\Users\olash\Desktop\Majestic-Agency-NewVersion\MajesticAgency\MajesticAgency\obj\Release\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs

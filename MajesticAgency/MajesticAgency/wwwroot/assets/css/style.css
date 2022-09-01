@@ -579,17 +579,17 @@ section {
   color: #fff;
   font-size: 28px;
 }
-.services .icon-box .icon::before {
-    position: absolute;
-    content: "";
-    left: -8px;
-    top: -8px;
-    height: 100%;
-    width: 100%;
-    background: #e1251b;
-    transition: all 0.3s ease-out 0s;
-    transform: translateZ(-1px);
-}
+    .services .icon-box .icon::before {
+        position: absolute;
+        content: "";
+        left: -8px;
+        top: -8px;
+        height: 100%;
+        width: 100%;
+        background: #fc9d87;
+        transition: all 0.3s ease-out 0s;
+        transform: translateZ(-1px);
+    }
 
 .services .icon-box h4 {
   font-weight: 700;
@@ -608,11 +608,11 @@ section {
 .services .icon-box p a {
     color: #e1251b;
 }
-.services .icon-box:hover {
-    background: #e1251b;
-    border-color: #e1251b;
-    padding: 70px 20px 90px 20px;
-}
+    .services .icon-box:hover {
+        background: #e1251b;
+        border-color: #e1251b;
+        padding: 70px 20px 90px 20px;
+    }
 
 .services .icon-box:hover .icon {
   background: #fff;
@@ -621,9 +621,9 @@ section {
 .services .icon-box:hover .icon .test {
     filter: invert(1);
 }
-.services .icon-box:hover .icon::before {
-    background: #e1251b;
-}
+    .services .icon-box:hover .icon::before {
+        background: #fc9d87;
+    }
 
 .services .icon-box:hover h4,
 .services .icon-box:hover p,

@@ -290,19 +290,17 @@
 
               <div class="form-group mt-3 col-md-6">
                                 <label style="font-size: 15px;color: #404040;font-weight: 700;margin: 10px 0;">What services do you need?</label>
-               @Html.DropDownListFor(model => model.Order.ServiceId, new SelectList(Model.Services, "Id", "Name"),
-                                "Select Service", new { @class = "form-control", @style="color: #90979d;font-size: 14px;padding: 0.6rem 0.75rem;border-radius:0;box-shadow: none;" })
-
+               @Html.DropDownListFor(model => model.Order.ServiceId, new MultiSelectList(Model.Services, "Id", "Name"),
+                                "Select Service", new { @class = "form-control selectpicker", @style="color: #90979d;font-size: 14px;padding: 0.6rem 0.75rem;border-radius:0;box-shadow: none;", @multiple="multiple"})
 
               </div>
               </div>
 
               <div class="row">
               <div class="form-group mt-3 col-md-3">
-                                <label style="font-size: 15px;color: #404040;font-weight: 700;margin: 10px 0;">How did you discover us?</label>
-                    <select class="form-control" style="color: #90979d;font-size: 14px;padding: 0.6rem 0.75rem;border-radius:0;box-shadow: none;" asp-for="@Model.Order.Discover">
-                    <option disabled selected>Select how know us</option>
-                    <option>Client work us</option>
+                    <label style="font-size: 15px;color: #404040;font-weight: 700;margin: 10px 0;">How did you discover us?</label>
+                    <select class="form-control selectpicker" style="color: #90979d;font-size: 14px;padding: 0.6rem 0.75rem;border-radius:0;box-shadow: none;" asp-for="@Model.Order.Discover" multiple>
+                    <option> Client work us</option>
                     <option>The world wide web</option>
                     <option>Social media</option>
                     <option>Premonition</option>
@@ -343,3 +341,12 @@
         </div>
     </section> 
   </main><!-- End #main -->
+
+
+
+
+<select class="selectpicker" multiple >
+  <option>Mustard</option>
+  <option>Ketchup</option>
+  <option>Relish</option>
+</select>

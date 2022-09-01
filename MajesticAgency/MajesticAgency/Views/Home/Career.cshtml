@@ -51,7 +51,7 @@
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo"><img src="/assets/img/MajesticAgencyLogo.png" alt="" class="img-fluid"></a>
+      <a asp-controller="Home" asp-action="Index" class="logo"><img src="/assets/img/MajesticAgencyLogo.png" alt="" class="img-fluid"></a>
 
       <nav id="navbar" class="navbar">
         <ul>
@@ -137,16 +137,16 @@
                                 </div>
                             </div>
 
-                                                        <div class="row">
+                            <div class="row">
                             <div class="form-group mt-3 col-md-12">
                             <label style="font-size: 15px;color: #404040;font-weight: 700;margin: 10px 0;">Do you have a desire to learn?</label>
                             <div style="text-align: center;display: flex;justify-content: space-evenly;">
                             <label style="font-size: 15px;color: #404040;margin: 10px 0;">Not at all <br /></label>
-                            <input style="width: 20px;" type="radio" name="content" value="1" >
-                            <input style="width: 20px;" type="radio" name="content" value="2" >
-                            <input style="width: 20px;" type="radio" name="content" value="3" >
-                            <input style="width: 20px;" type="radio" name="content" value="4" >
-                            <input style="width: 20px;" type="radio" name="content" value="5" >
+                            @Html.RadioButtonFor(m => m.Career.Q1, 1, new {@style="width: 20px;"})
+                            @Html.RadioButtonFor(m => m.Career.Q1, 2, new {@style="width: 20px;"})
+                            @Html.RadioButtonFor(m => m.Career.Q1, 3, new {@style="width: 20px;"})
+                            @Html.RadioButtonFor(m => m.Career.Q1, 4, new {@style="width: 20px;"})
+                            @Html.RadioButtonFor(m => m.Career.Q1, 5, new {@style="width: 20px;"})
                             <label style="font-size: 15px;color: #404040;margin: 10px 0;">Yes and strongly</label>
                             </div>
                             </div>
@@ -157,11 +157,11 @@
                             <label style="font-size: 15px;color: #404040;font-weight: 700;margin: 10px 0;">Do you have the ability to generate creative ideas to deliver them to your target customers?</label>
                             <div style="text-align: center;display: flex;justify-content: space-evenly;">
                             <label style="font-size: 15px;color: #404040;margin: 10px 0;">Not at all <br /></label>
-                            <input style="width: 20px;" type="radio" name="content2" value="1" >
-                            <input style="width: 20px;" type="radio" name="content2" value="2" >
-                            <input style="width: 20px;" type="radio" name="content2" value="3" >
-                            <input style="width: 20px;" type="radio" name="content2" value="4" >
-                            <input style="width: 20px;" type="radio" name="content2" value="5" >
+                            @Html.RadioButtonFor(m => m.Career.Q2, 1, new {@style="width: 20px;"})
+                            @Html.RadioButtonFor(m => m.Career.Q2, 2, new {@style="width: 20px;"})
+                            @Html.RadioButtonFor(m => m.Career.Q2, 3, new {@style="width: 20px;"})
+                            @Html.RadioButtonFor(m => m.Career.Q2, 4, new {@style="width: 20px;"})
+                            @Html.RadioButtonFor(m => m.Career.Q2, 5, new {@style="width: 20px;"})
                             <label style="font-size: 15px;color: #404040;margin: 10px 0;">Yes and strongly</label>
                             </div>
                             </div>
@@ -172,11 +172,11 @@
                             <label style="font-size: 15px;color: #404040;font-weight: 700;margin: 10px 0;">According to previous experiences, what is your ability to deliver the required job on time</label>
                             <div style="text-align: center;display: flex;justify-content: space-evenly;">
                             <label style="font-size: 15px;color: #404040;margin: 10px 0;">Trouble getting <br />delivered on time<br /></label>
-                            <input style="width: 20px;" type="radio" name="content3" value="1">
-                            <input style="width: 20px;" type="radio" name="content3" value="2">
-                            <input style="width: 20px;" type="radio" name="content3" value="3">
-                            <input style="width: 20px;" type="radio" name="content3" value="4">
-                            <input style="width: 20px;" type="radio" name="content3" value="5">
+                            @Html.RadioButtonFor(m => m.Career.Q3, 1, new {@style="width: 20px;"})
+                            @Html.RadioButtonFor(m => m.Career.Q3, 2, new {@style="width: 20px;"})
+                            @Html.RadioButtonFor(m => m.Career.Q3, 3, new {@style="width: 20px;"})
+                            @Html.RadioButtonFor(m => m.Career.Q3, 4, new {@style="width: 20px;"})
+                            @Html.RadioButtonFor(m => m.Career.Q3, 5, new {@style="width: 20px;"})
                             <label style="font-size: 15px;color: #404040;margin: 10px 0;">Deliver before time</label>
                             </div>
                             </div>
@@ -187,12 +187,12 @@
                             <label style="font-size: 15px;color: #404040;font-weight: 700;margin: 10px 0; text-align:justify"> In the company, we use a set of programs that help us increase employee productivity, such as project management and time monitoring programs. Writing plans for future steps and writing reports on the tasks performed is an important part of the responsibilities. Are you ready to abide by them?</label>
                             <div>
                             <div>
-                            <input style="width: 20px;" type="radio" name="content4" value="1" >
+                            @Html.RadioButtonFor(m => m.Career.Q4, "Yes", new {@style="width: 20px;"})
                             <label>Yes</label>
                             </div>
                             <div>
-                            <input style="width: 20px;" type="radio" name="content4" value="2" >
-                            <label>No</label>
+                             @Html.RadioButtonFor(m => m.Career.Q4, "No", new {@style="width: 20px;"})
+                             <label>No</label>
                             </div>
                             </div>
                             </div>
@@ -240,73 +240,74 @@
 
   </main><!-- End #main -->
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
 
-          <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-4 col-md-6">
                         <div class="footer-info" data-aos="fade-up">
-              <img style="width: 75%;" src="/assets/img/MajesticAgencyLogo2.png"/>
-              <p>
-                <br>
-                <h3 style="font-size:25px;">Get in touch with us?</h3>
-                Email: info&#64;<strong>majesticagency</strong>.net<br>
-                Follow us: &#64;<strong>agencymajestic</strong><br>
-              </p>
-                            <div class="social-links mt-3" >
-                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-                <a href="#" class="linkedin"><i class="bx bxl-behance"></i></a>
-                <a href="#" class="google-plus"><i class="bx bxl-youtube"></i></a>
-              </div>
+                            <img style="width: 75%;" src="/assets/img/MajesticAgencyLogo2.png" />
+                            <p>
+                                <br>
+                                <h3 style="font-size:25px;">Get in touch with us?</h3>
+                                Email: info&#64;<strong>majesticagency</strong>.net<br>
+                                Follow us: &#64;<strong>agencymajestic</strong><br>
+                            </p>
+                            <div class="social-links mt-3">
+                                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                                <a href="#" class="linkedin"><i class="bx bxl-behance"></i></a>
+                                <a href="#" class="google-plus"><i class="bx bxl-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 footer-links" data-aos="fade-up">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a asp-controller="Home" asp-action="Index" asp-fragment="hero">Home</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a asp-controller="Home" asp-action="Index" asp-fragment="about">About</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#services">Services</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a asp-controller="Home" asp-action="Career">Career</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a asp-controller="Home" asp-action="Index" asp-fragment="contact">Contact</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a asp-controller="Home" asp-action="Privacy">Privacy policy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 footer-links" data-aos="fade-up">
+                        <h4>Our Services</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a asp-controller="Home" asp-action="ServiceDetails" asp-route-Id="1">Brand & Design Services</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a asp-controller="Home" asp-action="ServiceDetails" asp-route-Id="2">Digital Marketing Services</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a asp-controller="Home" asp-action="ServiceDetails" asp-route-Id="3">Development Services</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a asp-controller="Home" asp-action="ServiceDetails" asp-route-Id="4">Production Services</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a asp-controller="Home" asp-action="ServiceDetails" asp-route-Id="5">Content Services</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a asp-controller="Home" asp-action="ServiceDetails" asp-route-Id="6">Translation Services</a></li>
+                        </ul>
+                    </div>
+
+
+                    <div class="col-lg-4 col-md-6 footer-newsletter" data-aos="fade-up">
+                        <h4>TAKE THE LEAP OF FAITH AND LEAVE THE REST TO US</h4>
+                        <p>Book a meeting with our strategy team and let’s get down to business.</p>
+                        <a class="btn-get-started scrollto" style="margin-top: 5px;margin-bottom: 20px;" href="#getstarted">GET STARTED</a>
+                        <img src="/assets/img/ImageFooter.png" class="img-fluid" alt="" style="width:100%;">
+
+                    </div>
+
+                </div>
             </div>
-          </div>
-
-                    <div class="col-lg-2 col-md-6 footer-links" data-aos="fade-up">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="/home/#hero">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="/home/#about">About</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="/home/#services">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
-
-                    <div class="col-lg-2 col-md-6 footer-links" data-aos="fade-up">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a asp-controller="Home" asp-action="ServiceDetails" asp-route-Id="1">Brand & Design Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a asp-controller="Home" asp-action="ServiceDetails" asp-route-Id="2">Digital Marketing Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a asp-controller="Home" asp-action="ServiceDetails" asp-route-Id="3">Development Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a asp-controller="Home" asp-action="ServiceDetails" asp-route-Id="4">Production Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a asp-controller="Home" asp-action="ServiceDetails" asp-route-Id="5">Content Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a asp-controller="Home" asp-action="ServiceDetails" asp-route-Id="6">Translation Services</a></li>
-            </ul>
-          </div>
-
-
-           <div class="col-lg-4 col-md-6 footer-newsletter" data-aos="fade-up">
-            <h4>TAKE THE LEAP OF FAITH AND LEAVE THE REST TO US</h4>
-            <p>Book a meeting with our strategy team and let’s get down to business.</p>
-            <a class="btn-get-started scrollto" style="margin-top: 5px;margin-bottom: 20px;" href="/home/#getstarted">GET STARTED</a>
-            <img src="/assets/img/ImageFooter.png" class="img-fluid" alt="" style="width:100%;">
-
-          </div>
-
         </div>
-      </div>
-    </div>
 
-        <div class="container" >
-            <div class="copyright" >
+        <div class="container">
+            <div class="copyright">
                 <p data-aos="fade-up">Copyright &copy; 2022 by Majestic Agency, All rights reserved.</p>
-      </div>
-    </div>
-  </footer><!-- End Footer -->
+            </div>
+        </div>
+    </footer><!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
   <div id="preloader"></div>
